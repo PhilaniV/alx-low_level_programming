@@ -1,39 +1,79 @@
 #include "main.h"
+
+
 /**
-* times_table  - multiplication table
-* Return: no return   Always (SUCCESS)
-* betty style doc for function main goes there
-*/
+
+ * times_table - check description
+
+ * Description: It prints 9 times table starting with 0
+
+ * Return: Nothing.
+
+ */
+
 void times_table(void)
+
 {
-int num1[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-int num2[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-int a, b;
-int result;
-int firstnum;
-int lastnum;
-for (a = 0; a <= 9; a++)
-{
-for (b = 0; b <= 9; b++)
-{
-result = num1[a] * num2[b];
-firstnum = result / 10;
-lastnum = result % 10;
-if (b != 0)
-{
-_putchar(',');
-_putchar(' ');
-if (result < 10)
-_putchar(' ');
+
+        int i, j, n;
+
+
+        for (i = 0; i <= 9; i++)
+
+        {
+
+                for (j = 0; j <= 9; j++)
+
+                {
+
+                        n = i * j;
+
+
+                        if ((n / 10) == 0)
+
+                        {
+
+                                if (j != 0)
+
+                                        _putchar(' ');
+
+                                _putchar(n + '0');
+
+
+                                if (j == 9)
+
+                                        continue;
+
+                                _putchar(',');
+
+                                _putchar(' ');
+
+                        }
+
+                        else
+
+                        {
+
+                                _putchar((n / 10) + '0');
+
+                                _putchar((n % 10) + '0');
+
+                                if (j == 9)
+
+                                        continue;
+
+                                _putchar(',');
+
+                                _putchar(' ');
+
+                        }
+
+                }
+
+                _putchar('\n');
+
+        }
+
 }
-if (result < 10)
-_putchar('0' + result);
-else
-{
-_putchar('0' + firstnum);
-_putchar('0' + lastnum);
-}
-}
-_putchar('\n');
-}
-}
+
+
