@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 #include <stdio.h>
 
 /**
@@ -25,4 +25,4 @@ void more_numbers(void)
 		}
 	_putchar('\n');
 	}
-}
+k}
