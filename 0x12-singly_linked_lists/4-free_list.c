@@ -2,12 +2,12 @@
 #include "lists.h"
 
 /**
- * free_lst - frees a linked list
- * @head: lst_t list to be freed
+ * free_lst - this frees a linked list
+ * @head: the lst_t list to be freed
  */
-void free_lst(lst_t *head)
+void free_list(list_t *head)
 {
-	lst_t *tmp;
+	list_t *tmp;
 
 	while (head)
 	{
