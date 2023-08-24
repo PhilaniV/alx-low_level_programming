@@ -3,21 +3,21 @@
 #include "lists.h"
 
 /**
- * add_node - adds a new node at the beginning of a linked list
+ * add_node - this adds a new node at the beginning of a linked list
  * @head: double pointer to the list_t list
- * @str: new string to add in the node
+ * @str: the new string to add in the node
  *
- * Return: the address of the new element, or NULL if it fails
+ * Return: address of the new element, or NULL if it fails
  */
-lst_t *add_node(lst_t **head, const char *str)
+list_t *add_node(list_t **head, const char *str)
 {
-	lst_t *new;
+	list_t *new;
 	unsigned int len = 0;
 
 	while (str[len])
 		len++;
 
-	new = malloc(sizeof(lst_t));
+	new = malloc(sizeof(list_t));
 	if (!new)
 		return (NULL);
 
